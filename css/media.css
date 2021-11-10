@@ -1,0 +1,94 @@
+@media(max-width:990px){
+    .header .content{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .header .one ,
+    .header .two ,
+    .header .three{
+        height: auto;
+        text-align: center;
+    }
+    .header .content img{
+        width: 300px;
+    }
+    .header .one h4,
+    .header .two h4{
+        padding-top: initial;
+    }
+    .circles ul{
+        top: 20%;
+        left: 9px;
+        flex-direction: column;
+    }
+    .welcome .content{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .welcome .left img{
+        max-width: 500px;
+    }
+    .welcome .right h1{
+        padding-top: 30px;
+    }
+    .welcome .right p{
+        padding-right: 20px;
+        padding-left: 20px;
+        max-width: 100%;
+        padding-bottom: 20px;
+    }
+    .photos .content{
+        display: grid;
+        grid-template-columns: repeat(2 , 50%);
+    }
+    .photos .content .image::before{
+        top: 30%;
+        left: 38%;
+    }
+    .blog .cont .z{
+        width: 280px;
+    }
+    .footer{
+        text-align: start;
+    }
+}
+@media(max-width:770px){
+    .nav .content .right{
+        display: none;
+    }
+    .nav .content .menu{
+        display: inline-block;
+    }
+    .address{
+        text-align: center;
+    }
+    .address .cont .top{
+        justify-content: center;
+    }
+    .photos .content{
+        grid-template-columns: repeat(1 , 320px);
+        gap: 20px;
+        justify-content: center;
+    }
+    .list .content .right .top{
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-left: 0;
+    }
+    .list .content{
+        display: flex;
+    }
+    .list .content .left img{
+        display: none;
+    }
+    .blog .cont img{
+        max-height: 190px;
+    }
+    .blog .cont .z{
+        width: 100%;
+    }
+
+}
