@@ -1,6 +1,7 @@
 window.onload = function(){
     $('.loading').fadeOut(1000).parent().css({
-        "overflow-y" : "scroll"
+        "overflow-y" : "scroll" ,
+        "overflow-x" : "hidden" 
     });
     $('.nav').show(500)
     $('.styles').show(500)
@@ -10,6 +11,25 @@ window.onload = function(){
     })
 }
 $(document).ready(function(){
+    $('.home-slider').owlCarousel({
+        autoplay:true,
+        autoplayTimeout:1500,
+        autoplayHoverPause:true,
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
+        }
+    })
     $('.offcanvas.show').show(function(){
         $('.circles').hide(100)
     });
@@ -151,7 +171,7 @@ $(document).ready(function(){
             });
             $('.statics .cont .customer').each(function(){
             $(this).prop('counter' , 0).animate({
-                counter : 124560
+                counter : 17820
             } , {
                     duration : 4000 , 
                     easing : 'linear' ,

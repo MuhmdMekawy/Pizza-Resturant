@@ -3,7 +3,7 @@ body{
     background-image: url("../images/bg_4.jpg");
     background-size: cover;
     background-attachment: fixed;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 :root{
     --main-color: #fac564 ;
@@ -11,16 +11,21 @@ body{
     --spe-font-family: 'Nothing You Could Do', cursive;
     --head-font-family: 'Josefin Slab', serif;
 }
+
+a{
+    color: unset;
+    text-decoration: none;
+}
 ::selection{
     background-color: var(--main-color);
     color: var(--sec-color);
 }
 ::-webkit-scrollbar{
-    background-color: var(--sec-color);
+    background-color: var(--main-color);
     width: 5px;
 }
 ::-webkit-scrollbar-thumb{
-    background-color: var(--main-color);
+    background-color: var(--sec-color);
 }
 /* start navbar */
 .nav{
@@ -115,46 +120,32 @@ body{
 }
 /* end navbar */
 /* start header */
-.header .one ,
-.header .two ,
-.header .three{
+.header .item{
     background-image: url("../images/1.jpg");
     background-size: cover;
     color: white;
     padding-top: 100px;
     padding-bottom: 60px;
-    height: 100vh;
 }
 .header .content{
-    display: grid;
-    grid-template-columns: repeat(2 , 45%);
-    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.header .content .left{
+    max-width: 500px;
+}
+.header .owl-theme .owl-dots, .owl-theme .owl-nav{
+    display: none;
 }
 .header .content img{
     width: 100%;
+    object-fit: cover;
 }
 .item{
     width: 100%;
-}
-.header .two{
-    display: none;
-    direction: rtl;
-}
-.header .three{
-    background-image: url("../images/bg_3.jpg");
-    background-size: cover;
-    display: none; 
-}
-.header .three .content{
-    height: 100vh;
-    width: 100%;
-    background-color: #00000082;
-    display: block;
-    margin-top: -101px;
-    margin-bottom: -60px;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    text-align: center;
 }
 .header h4{
     padding-top: 150px;
@@ -212,33 +203,6 @@ body{
 }
 .header .buttons .show:hover a{
     color: var(--sec-color);
-}
-.circles ul{
-    position: absolute;
-    bottom: 15px;
-    left: 45%;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    padding-left: 0;
-}
-.circles ul li{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: 1px solid white;
-    cursor: pointer;
-    position: relative;
-}
-.circles ul li div{
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: white;
-    margin: 4px;
 }
 /* end header */
 /* start address */
@@ -537,6 +501,7 @@ body{
 .photos .content img{
     width: 100%;
     max-height: 300px;
+    object-fit: cover;
 }
 
 .photos .content .image::after{
@@ -902,20 +867,19 @@ body{
     z-index: 99;
     position: fixed;
     top: 64px;
-    right: 0;
+    right: 0px;
     display: none;
 }
 .styles .content{
     display: flex;
     flex-direction: row-reverse;
-    transform: translate(13px, 0);
 }
 .styles .content .left{
     width: 45px;
     padding: 5px;
     height: fit-content;
     cursor: pointer;
-    background-color: var(--sec-color);
+    background-color: var(--main-color);
     display: none;
 }
 .styles .content .left img{

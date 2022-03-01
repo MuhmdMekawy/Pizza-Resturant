@@ -2,25 +2,16 @@
     .header .content{
         display: flex;
         flex-direction: column;
-        gap: 15px;
-    }
-    .header .one ,
-    .header .two ,
-    .header .three{
-        height: auto;
+        gap: 30px;
+        justify-content: center;
         text-align: center;
     }
     .header .content img{
         width: 300px;
+        margin: 0 auto;
     }
-    .header .one h4,
-    .header .two h4{
+    .header h4{
         padding-top: initial;
-    }
-    .circles ul{
-        top: 20%;
-        left: 9px;
-        flex-direction: column;
     }
     .welcome .content{
         display: flex;
@@ -68,7 +59,7 @@
         justify-content: center;
     }
     .photos .content{
-        grid-template-columns: repeat(1 , 320px);
+        grid-template-columns: repeat(2 , 1fr);
         gap: 20px;
         justify-content: center;
     }
@@ -90,5 +81,29 @@
     .blog .cont .z{
         width: 100%;
     }
-
+    .welcome .left img{
+        max-width: 500px;
+    }
+}
+@media (max-width:500px){
+    .header h1{
+        font-size: 28px;
+    }
+    .header p{
+        font-size: 14px;
+        max-width: 300px;
+    }
+    .pricing{
+        padding-top: 30px;
+    }
+    .welcome .left img{
+        width: 300px;
+        height: 300px;
+    }
+    .photos .content{
+        grid-template-columns: repeat(1 , 1fr);
+    }
+    .welcome .right h1{
+        font-size: 28px;
+    }
 }
