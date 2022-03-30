@@ -3,9 +3,9 @@ window.onload = function(){
         "overflow-y" : "scroll" ,
         "overflow-x" : "hidden" 
     });
-    $('.nav').show(500)
-    $('.styles').show(500)
-    $('.styles .content .left').show(500)
+    $('.nav').show(1000)
+    $('.styles').show(1000)
+    $('.styles .content .left').show(1000)
     $('.nav').css({
         "z-index" : "99"
     })

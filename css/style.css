@@ -3,7 +3,7 @@ body{
     background-image: url("../images/bg_4.jpg");
     background-size: cover;
     background-attachment: fixed;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 :root{
     --main-color: #fac564 ;
